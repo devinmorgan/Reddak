@@ -54,14 +54,22 @@
 		228B1EED1D515C580071ABB4 /* Reddak */ = {
 			isa = PBXGroup;
 			children = (
-				228B1EEE1D515C580071ABB4 /* AppDelegate.swift */,
+				228B1F001D515E9E0071ABB4 /* Support Files */,
 				228B1EF01D515C580071ABB4 /* ViewController.swift */,
 				228B1EF21D515C580071ABB4 /* Main.storyboard */,
+			);
+			path = Reddak;
+			sourceTree = "<group>";
+		};
+		228B1F001D515E9E0071ABB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				228B1EEE1D515C580071ABB4 /* AppDelegate.swift */,
 				228B1EF51D515C580071ABB4 /* Assets.xcassets */,
 				228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */,
 				228B1EFA1D515C580071ABB4 /* Info.plist */,
 			);
-			path = Reddak;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
