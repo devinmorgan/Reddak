@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1EEE1D515C580071ABB4 /* AppDelegate.swift */; };
+		228B1EF11D515C580071ABB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1EF01D515C580071ABB4 /* ViewController.swift */; };
+		228B1EF41D515C580071ABB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF21D515C580071ABB4 /* Main.storyboard */; };
+		228B1EF61D515C580071ABB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF51D515C580071ABB4 /* Assets.xcassets */; };
+		228B1EF91D515C580071ABB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		228B1EEB1D515C570071ABB4 /* Reddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228B1EEE1D515C580071ABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		228B1EF01D515C580071ABB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		228B1EF31D515C580071ABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		228B1EF51D515C580071ABB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		228B1EF81D515C580071ABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		228B1EFA1D515C580071ABB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		228B1EE81D515C570071ABB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		228B1EE21D515C570071ABB4 = {
+			isa = PBXGroup;
+			children = (
+				228B1EED1D515C580071ABB4 /* Reddak */,
+				228B1EEC1D515C570071ABB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		228B1EEC1D515C570071ABB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				228B1EEB1D515C570071ABB4 /* Reddak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		228B1EED1D515C580071ABB4 /* Reddak */ = {
+			isa = PBXGroup;
+			children = (
+				228B1EEE1D515C580071ABB4 /* AppDelegate.swift */,
+				228B1EF01D515C580071ABB4 /* ViewController.swift */,
+				228B1EF21D515C580071ABB4 /* Main.storyboard */,
+				228B1EF51D515C580071ABB4 /* Assets.xcassets */,
+				228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */,
+				228B1EFA1D515C580071ABB4 /* Info.plist */,
+			);
+			path = Reddak;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		228B1EEA1D515C570071ABB4 /* Reddak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 228B1EFD1D515C580071ABB4 /* Build configuration list for PBXNativeTarget "Reddak" */;
+			buildPhases = (
+				228B1EE71D515C570071ABB4 /* Sources */,
+				228B1EE81D515C570071ABB4 /* Frameworks */,
+				228B1EE91D515C570071ABB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reddak;
+			productName = Reddak;
+			productReference = 228B1EEB1D515C570071ABB4 /* Reddak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		228B1EE31D515C570071ABB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Devin Morgan";
+				TargetAttributes = {
+					228B1EEA1D515C570071ABB4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WNYYFL466F;
+					};
+				};
+			};
+			buildConfigurationList = 228B1EE61D515C570071ABB4 /* Build configuration list for PBXProject "Reddak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 228B1EE21D515C570071ABB4;
+			productRefGroup = 228B1EEC1D515C570071ABB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				228B1EEA1D515C570071ABB4 /* Reddak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		228B1EE91D515C570071ABB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228B1EF91D515C580071ABB4 /* LaunchScreen.storyboard in Resources */,
+				228B1EF61D515C580071ABB4 /* Assets.xcassets in Resources */,
+				228B1EF41D515C580071ABB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		228B1EE71D515C570071ABB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228B1EF11D515C580071ABB4 /* ViewController.swift in Sources */,
+				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		228B1EF21D515C580071ABB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				228B1EF31D515C580071ABB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				228B1EF81D515C580071ABB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		228B1EFB1D515C580071ABB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		228B1EFC1D515C580071ABB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		228B1EFE1D515C580071ABB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Reddak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.devinm.Reddak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		228B1EFF1D515C580071ABB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Reddak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mit.devinm.Reddak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		228B1EE61D515C570071ABB4 /* Build configuration list for PBXProject "Reddak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				228B1EFB1D515C580071ABB4 /* Debug */,
+				228B1EFC1D515C580071ABB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		228B1EFD1D515C580071ABB4 /* Build configuration list for PBXNativeTarget "Reddak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				228B1EFE1D515C580071ABB4 /* Debug */,
+				228B1EFF1D515C580071ABB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 228B1EE31D515C570071ABB4 /* Project object */;
+}
