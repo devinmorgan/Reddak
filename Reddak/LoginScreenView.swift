@@ -8,52 +8,81 @@
 
 import UIKit
 
+struct RGBAColor {
+    let red, green, blue, alpha: CGFloat
+    
+    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        self.red = red/255.0
+        self.green = green/255.0
+        self.blue = blue/255.0
+        self.alpha = alpha
+    }
+}
+
+struct Gradient {
+    private let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
+    private let colorComponents: [CGFloat]
+    private let locations: [CGFloat] = [0,1]
+    
+    let startCenter, endCenter: CGPoint
+    let startRadius, endRadius: CGFloat
+    
+    init(startCenter: CGPoint, endCenter: CGPoint, startRadius: CGFloat,
+         endRadius: CGFloat, firstColor: RGBAColor, secondColor: RGBAColor) {
+        self.startCenter = startCenter
+        self.endCenter = endCenter
+        self.startRadius = startRadius
+        self.endRadius = endRadius
+        self.colorComponents = [
+            firstColor.red, firstColor.green, firstColor.blue, firstColor.alpha,
+            secondColor.red, secondColor.green, secondColor.blue, secondColor.alpha
+        ]
+    }
+    
+    init(center startCenter: CGPoint, radius endRadius: CGFloat,
+                firstColor: RGBAColor, secondColor: RGBAColor) {
+        self.init(startCenter: startCenter, endCenter: startCenter,
+                  startRadius: 0, endRadius: endRadius, firstColor: firstColor,
+                  secondColor: secondColor)
+    }
+    
+    func gradient() -> CGGradientRef {
+        return CGGradientCreateWithColorComponents(colorSpace, colorComponents, locations, 2)!
+    }
+}
+
 class LoginScreenView: UIView {
     
-    struct RGBAColor {
-        let red, green, blue, alpha: CGFloat
+    private lazy var mainTitleLabel: UILabel = {
+        let label = UILabel.init()
         
-        init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-            self.red = red/255.0
-            self.green = green/255.0
-            self.blue = blue/255.0
-            self.alpha = alpha
-        }
-    }
+        // create values
+        let text = "Reddak"
+        let font = UIFont.init(name: "HelveticaNeue-Thin", size: 60.0)
+        let textColor = UIColor.whiteColor()
+        
+        let width = self.frame.width
+        let height: CGFloat = 50.0
+        let xPos: CGFloat = 0.0
+        let yPos: CGFloat = self.frame.height * 0.181
+        
+        // set values
+        label.text = text
+        label.font = font
+        label.textColor = textColor
+        
+        label.frame.origin.x = xPos
+        label.frame.origin.y = yPos
+        label.frame.size.width = width
+        label.frame.size.height = height
+        label.textAlignment = NSTextAlignment.Center
+        
+        return label
+    }()
     
-    struct Gradient {
-        private let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
-        private let colorComponents: [CGFloat]
-        private let locations: [CGFloat] = [0,1]
-        
-        let startCenter, endCenter: CGPoint
-        let startRadius, endRadius: CGFloat
-        
-        init(startCenter: CGPoint, endCenter: CGPoint, startRadius: CGFloat,
-            endRadius: CGFloat, firstColor: RGBAColor, secondColor: RGBAColor) {
-            self.startCenter = startCenter
-            self.endCenter = endCenter
-            self.startRadius = startRadius
-            self.endRadius = endRadius
-            self.colorComponents = [
-                firstColor.red, firstColor.green, firstColor.blue, firstColor.alpha,
-                secondColor.red, secondColor.green, secondColor.blue, secondColor.alpha
-            ]
-        }
-        
-        init(center startCenter: CGPoint, radius endRadius: CGFloat,
-             firstColor: RGBAColor, secondColor: RGBAColor) {
-            self.init(startCenter: startCenter, endCenter: startCenter,
-                      startRadius: 0, endRadius: endRadius, firstColor: firstColor,
-                      secondColor: secondColor)
-        }
-        
-        func gradient() -> CGGradientRef {
-            return CGGradientCreateWithColorComponents(colorSpace, colorComponents, locations, 2)!
-        }
-    }
+    // background gradients
     
-    lazy var topRightGradient: Gradient = {
+    private lazy var topRightGradient: Gradient = {
         let center: CGPoint = CGPointMake(self.frame.width, 0)
         let radius: CGFloat = self.frame.height * 0.60
         let color1 = RGBAColor(red: 121, green: 74, blue: 162, alpha: 1)
@@ -63,7 +92,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy var topMiddleGradient: Gradient = {
+    private lazy var topMiddleGradient: Gradient = {
         let center: CGPoint = CGPointMake(self.frame.width/2, 0)
         let radius: CGFloat = self.frame.height * 0.75
         let color1 = RGBAColor(red: 84, green: 90, blue: 182, alpha: 0.60)
@@ -73,7 +102,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy var bottomRightishGradient: Gradient = {
+    private lazy var bottomRightishGradient: Gradient = {
         let center: CGPoint = CGPointMake(self.frame.width*9/10, self.frame.height)
         let radius: CGFloat = self.frame.height * 0.40
         let color1 = RGBAColor(red: 82, green: 62, blue: 140, alpha: 1)
@@ -83,7 +112,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy var bottomLeftGradient: Gradient = {
+    private lazy var bottomLeftGradient: Gradient = {
         let center: CGPoint = CGPointMake(0, self.frame.height)
         let radius: CGFloat = self.frame.height * 0.75
         let color1 = RGBAColor(red: 118, green: 72, blue: 160, alpha: 0.70)
@@ -93,15 +122,11 @@ class LoginScreenView: UIView {
         
     }()
     
-    
-//    var bottomLeftGradient = CAGradientLayer()
-//    var solidBackground = UIColor()
-    
-    
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         CGContextSaveGState(context)
         
+        // add gradients to background
         CGContextDrawRadialGradient(context, bottomLeftGradient.gradient(),
                                     bottomLeftGradient.startCenter, bottomLeftGradient.startRadius,
                                     bottomLeftGradient.endCenter, bottomLeftGradient.endRadius,
@@ -118,6 +143,9 @@ class LoginScreenView: UIView {
                                     topRightGradient.startCenter, topRightGradient.startRadius,
                                     topRightGradient.endCenter, topRightGradient.endRadius,
                                     .DrawsBeforeStartLocation)
+        
+        // add views to background
+        self.addSubview(mainTitleLabel)
         
         CGContextRestoreGState(context)
 
