@@ -13,6 +13,7 @@
 		228B1EF91D515C580071ABB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */; };
 		228B1F081D52B0FB0071ABB4 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */; };
 		228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */; };
+		228B1F0C1D53D1E70071ABB4 /* IconUnderbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		228B1EFA1D515C580071ABB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUnderbarTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				228B1EF21D515C580071ABB4 /* Main.storyboard */,
 				228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */,
+				228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				228B1F081D52B0FB0071ABB4 /* LoginScreenView.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
+				228B1F0C1D53D1E70071ABB4 /* IconUnderbarTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,35 +53,6 @@ struct Gradient {
 
 class LoginScreenView: UIView {
     
-    private lazy var mainTitleLabel: UILabel = {
-        let label = UILabel.init()
-        
-        // create values
-        let text = "Reddak"
-        let font = UIFont.init(name: "HelveticaNeue-Thin", size: 60.0)
-        let textColor = UIColor.whiteColor()
-        
-        let width = self.frame.width
-        let height: CGFloat = 50.0
-        let xPos: CGFloat = 0.0
-        let yPos: CGFloat = self.frame.height * 0.181
-        
-        // set values
-        label.text = text
-        label.font = font
-        label.textColor = textColor
-        
-        label.frame.origin.x = xPos
-        label.frame.origin.y = yPos
-        label.frame.size.width = width
-        label.frame.size.height = height
-        label.textAlignment = NSTextAlignment.Center
-        
-        return label
-    }()
-    
-    // background gradients
-    
     private lazy var topRightGradient: Gradient = {
         let center: CGPoint = CGPointMake(self.frame.width, 0)
         let radius: CGFloat = self.frame.height * 0.60
@@ -143,9 +114,6 @@ class LoginScreenView: UIView {
                                     topRightGradient.startCenter, topRightGradient.startRadius,
                                     topRightGradient.endCenter, topRightGradient.endRadius,
                                     .DrawsBeforeStartLocation)
-        
-        // add views to background
-        self.addSubview(mainTitleLabel)
         
         CGContextRestoreGState(context)
 
