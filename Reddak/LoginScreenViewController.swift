@@ -10,6 +10,10 @@ import UIKit
 
 class LoginScreenViewController: UIViewController {
     
+    private lazy var iPhoneSizeScaleFactor: CGFloat = {
+       return self.view.frame.width / 375.0
+    }()
+    
     lazy private var mainTitleLabel: UILabel = {
         
         let width = self.view.frame.width
@@ -19,7 +23,7 @@ class LoginScreenViewController: UIViewController {
         
         let label = UILabel.init(frame: CGRectMake(xPos, yPos, width, height))
         label.text = "Reddak"
-        label.font = UIFont.init(name: "HelveticaNeue-Thin", size: 60.0)
+        label.font = UIFont.init(name: "HelveticaNeue-Thin", size: 60.0 * self.iPhoneSizeScaleFactor)
         label.textColor = UIColor.whiteColor()
         label.textAlignment = NSTextAlignment.Center
         
@@ -33,7 +37,7 @@ class LoginScreenViewController: UIViewController {
         let width: CGFloat = self.view.frame.width - (2 * xPos)
         let height: CGFloat = 50.0
         
-        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0)!
+        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)!
         let fontColor = UIColor.init(white: 1.0, alpha: 0.80)
         let attributedPlaceholder = NSAttributedString.init(
             string: "Kerberos ID", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: fontColor]
@@ -57,7 +61,7 @@ class LoginScreenViewController: UIViewController {
         let width: CGFloat = self.view.frame.width - (2 * xPos)
         let height: CGFloat = 50.0
         
-        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0)!
+        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)!
         let fontColor = UIColor.init(white: 1.0, alpha: 0.80)
         let attributedPlaceholder = NSAttributedString.init(
             string: "Password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: fontColor]
@@ -74,15 +78,61 @@ class LoginScreenViewController: UIViewController {
         
     }()
     
+    lazy private var registerButton: UIButton = {
+        
+        let xPos: CGFloat = 0.0933 * self.view.frame.width
+        let yPos: CGFloat = 0.596 * self.view.frame.height
+        let width: CGFloat = self.view.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let attributedText =
+            NSAttributedString.init(
+                string: "Register Account",
+                attributes: [
+                    NSFontAttributeName: UIFont.init( name: "HelveticaNeue-Medium", size: 20.0 * self.iPhoneSizeScaleFactor)!,
+                    NSForegroundColorAttributeName: UIColor.init(red: 110.0/255.0, green: 93.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+                ])
+        
+        let button = UIButton.init(frame: CGRectMake(xPos, yPos, width, height))
+        button.setAttributedTitle(attributedText, forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.whiteColor()
+        button.layer.cornerRadius = 5.0
+        
+        return button
+        
+    }()
     
-
-    
+    lazy private var signInButton: UIButton = {
+        
+        let xPos: CGFloat = 0.0933 * self.view.frame.width
+        let yPos: CGFloat = 0.737 * self.view.frame.height
+        let width: CGFloat = self.view.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let attributedText =
+            NSAttributedString.init(
+                string: "Sign In",
+                attributes: [
+                    NSFontAttributeName: UIFont.init( name: "HelveticaNeue-Medium", size: 20.0 * self.iPhoneSizeScaleFactor)!,
+                    NSForegroundColorAttributeName: UIColor.whiteColor()
+                ])
+        
+        let button = UIButton.init(frame: CGRectMake(xPos, yPos, width, height))
+        button.setAttributedTitle(attributedText, forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.init(red: 110.0/255.0, green: 93.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+        button.layer.cornerRadius = 5.0
+        
+        return button
+        
+    }()
     
     func setUpLayout() {
         // add views to background
         self.view.addSubview(mainTitleLabel)
         self.view.addSubview(usernameInputField)
         self.view.addSubview(passwordInputField)
+        self.view.addSubview(registerButton)
+        self.view.addSubview(signInButton)
     }
     
     override func viewDidLoad() {
