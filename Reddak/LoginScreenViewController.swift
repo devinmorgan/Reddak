@@ -126,13 +126,30 @@ class LoginScreenViewController: UIViewController {
         
     }()
     
+    lazy private var orTextLabel: UILabel = {
+        let xPos: CGFloat = 0
+        let yPos: CGFloat = 0.691 * self.view.frame.height
+        let width: CGFloat = self.view.frame.width
+        let height: CGFloat = 18.0
+        
+        let label = UILabel.init(frame: CGRectMake(xPos, yPos, width, height))
+        label.text = "or"
+        label.font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)
+        label.textColor = UIColor.init(white: 1.0, alpha: 0.40)
+        label.textAlignment = NSTextAlignment.Center
+        
+        return label
+    
+    }()
+    
     func setUpLayout() {
         // add views to background
-        self.view.addSubview(mainTitleLabel)
-        self.view.addSubview(usernameInputField)
-        self.view.addSubview(passwordInputField)
-        self.view.addSubview(registerButton)
-        self.view.addSubview(signInButton)
+        self.view.addSubview(self.mainTitleLabel)
+        self.view.addSubview(self.usernameInputField)
+        self.view.addSubview(self.passwordInputField)
+        self.view.addSubview(self.registerButton)
+        self.view.addSubview(self.orTextLabel)
+        self.view.addSubview(self.signInButton)
     }
     
     override func viewDidLoad() {
