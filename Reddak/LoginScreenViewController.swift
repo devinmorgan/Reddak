@@ -156,5 +156,19 @@ class LoginScreenViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.init(red: 59.0/255, green: 47.0/255, blue: 99.0/255, alpha: 1.0)
         setUpLayout()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
+    }
+    
 }
+
+
+
+
+
