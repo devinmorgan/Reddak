@@ -193,7 +193,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var registerButton: UIButton = {
+    lazy private var topButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.596 * self.frame.height
@@ -217,7 +217,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var signInButton: UIButton = {
+    lazy private var bottomButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.737 * self.frame.height
@@ -259,14 +259,17 @@ class LoginScreenView: UIView {
     
     // override init method
     
-    override init(frame: CGRect) {
+    private var delegate: UIViewController
+    
+    init(frame: CGRect, delegate: UIViewController) {
+        self.delegate = delegate
         super.init(frame: frame)
         self.addSubview(self.mainTitleLabel)
         self.addSubview(self.usernameInputField)
         self.addSubview(self.passwordInputField)
-        self.addSubview(self.registerButton)
+        self.addSubview(self.topButton)
         self.addSubview(self.orTextLabel)
-        self.addSubview(self.signInButton)
+        self.addSubview(self.bottomButton)
         self.backgroundColor = UIColor.init(red: 59.0/255, green: 47.0/255, blue: 99.0/255, alpha: 1.0)
     }
     
@@ -274,4 +277,14 @@ class LoginScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // accessor methods
+    
+    func assignFunctionToTopButton(selector: Selector) {
+        self.topButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func assignFunctionToBottomButton(selector: Selector) {
+        self.bottomButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
 }

@@ -14,7 +14,6 @@
 		228B1F081D52B0FB0071ABB4 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */; };
 		228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */; };
 		228B1F0C1D53D1E70071ABB4 /* IconUnderbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */; };
-		228B1F0E1D5437340071ABB4 /* ColoredRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F0D1D5437340071ABB4 /* ColoredRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUnderbarTextField.swift; sourceTree = "<group>"; };
-		228B1F0D1D5437340071ABB4 /* ColoredRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 				228B1EF21D515C580071ABB4 /* Main.storyboard */,
 				228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */,
 				228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */,
-				228B1F0D1D5437340071ABB4 /* ColoredRoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -181,7 +178,6 @@
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
 				228B1F0C1D53D1E70071ABB4 /* IconUnderbarTextField.swift in Sources */,
-				228B1F0E1D5437340071ABB4 /* ColoredRoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +327,7 @@
 				228B1EFF1D515C580071ABB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -63,17 +63,13 @@ class IconUnderbarTextField: UIView {
         
         super.init(frame: frame)
         
-        self.setUpLayout()
+        self.addSubview(self.iconImageView)
+        self.addSubview(self.textField)
+        self.addSubview(self.underbar)
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setUpLayout() {
-        self.addSubview(self.iconImageView)
-        self.addSubview(self.textField)
-        self.addSubview(self.underbar)
     }
 
 }
