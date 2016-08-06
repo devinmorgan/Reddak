@@ -53,6 +53,8 @@ struct Gradient {
 
 class LoginScreenView: UIView {
     
+    // background colors & gradients
+    
     private lazy var topRightGradient: Gradient = {
         let center: CGPoint = CGPointMake(self.frame.width, 0)
         let radius: CGFloat = self.frame.height * 0.60
@@ -93,6 +95,8 @@ class LoginScreenView: UIView {
         
     }()
     
+    // drawRect
+    
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         CGContextSaveGState(context)
@@ -117,6 +121,157 @@ class LoginScreenView: UIView {
         
         CGContextRestoreGState(context)
 
+    }
+    
+    // subviews and other view elements
+    
+    private lazy var iPhoneSizeScaleFactor: CGFloat = {
+        return self.frame.width / 375.0
+    }()
+    
+    lazy private var mainTitleLabel: UILabel = {
+        
+        let width = self.frame.width
+        let height: CGFloat = 50.0
+        let xPos: CGFloat = 0.0
+        let yPos: CGFloat = self.frame.height * 0.181
+        
+        let label = UILabel.init(frame: CGRectMake(xPos, yPos, width, height))
+        label.text = "Reddak"
+        label.font = UIFont.init(name: "HelveticaNeue-Thin", size: 60.0 * self.iPhoneSizeScaleFactor)
+        label.textColor = UIColor.whiteColor()
+        label.textAlignment = NSTextAlignment.Center
+        
+        return label
+    }()
+    
+    lazy private var usernameInputField: IconUnderbarTextField = {
+        
+        let xPos: CGFloat = 0.0933 * self.frame.width
+        let yPos: CGFloat = 0.354 * self.frame.height
+        let width: CGFloat = self.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)!
+        let fontColor = UIColor.init(white: 1.0, alpha: 0.80)
+        let attributedPlaceholder = NSAttributedString.init(
+            string: "MIT Email", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: fontColor]
+        )
+        
+        var inputField = IconUnderbarTextField.init(
+            frame: CGRectMake(xPos, yPos, width, height), imageFileName: "UsernameLoginIcon",
+            mainColor: RGBAColor.init(red: 255.0, green: 255.0, blue: 255.0, alpha: 0.40),
+            attributedPlaceholder: attributedPlaceholder,
+            imageIconFrame: CGRectMake(3.0, 9.0, 18.0, 24.0)
+        )
+        
+        return inputField
+        
+    }()
+    
+    lazy private var passwordInputField: IconUnderbarTextField = {
+        
+        let xPos: CGFloat = 0.0933 * self.frame.width
+        let yPos: CGFloat = 0.465 * self.frame.height
+        let width: CGFloat = self.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)!
+        let fontColor = UIColor.init(white: 1.0, alpha: 0.80)
+        let attributedPlaceholder = NSAttributedString.init(
+            string: "Password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: fontColor]
+        )
+        
+        var inputField = IconUnderbarTextField.init(
+            frame: CGRectMake(xPos, yPos, width, height), imageFileName: "PasswordLoginIcon",
+            mainColor: RGBAColor.init(red: 255.0, green: 255.0, blue: 255.0, alpha: 0.40),
+            attributedPlaceholder: attributedPlaceholder,
+            imageIconFrame: CGRectMake(0.0, 7.0, 24.0, 28.0)
+        )
+        
+        return inputField
+        
+    }()
+    
+    lazy private var registerButton: UIButton = {
+        
+        let xPos: CGFloat = 0.0933 * self.frame.width
+        let yPos: CGFloat = 0.596 * self.frame.height
+        let width: CGFloat = self.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let attributedText =
+            NSAttributedString.init(
+                string: "Register Account",
+                attributes: [
+                    NSFontAttributeName: UIFont.init( name: "HelveticaNeue-Medium", size: 20.0 * self.iPhoneSizeScaleFactor)!,
+                    NSForegroundColorAttributeName: UIColor.init(red: 110.0/255.0, green: 93.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+                ])
+        
+        let button = UIButton.init(frame: CGRectMake(xPos, yPos, width, height))
+        button.setAttributedTitle(attributedText, forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.whiteColor()
+        button.layer.cornerRadius = 5.0
+        
+        return button
+        
+    }()
+    
+    lazy private var signInButton: UIButton = {
+        
+        let xPos: CGFloat = 0.0933 * self.frame.width
+        let yPos: CGFloat = 0.737 * self.frame.height
+        let width: CGFloat = self.frame.width - (2 * xPos)
+        let height: CGFloat = 50.0
+        
+        let attributedText =
+            NSAttributedString.init(
+                string: "Sign In",
+                attributes: [
+                    NSFontAttributeName: UIFont.init( name: "HelveticaNeue-Medium", size: 20.0 * self.iPhoneSizeScaleFactor)!,
+                    NSForegroundColorAttributeName: UIColor.whiteColor()
+                ])
+        
+        let button = UIButton.init(frame: CGRectMake(xPos, yPos, width, height))
+        button.setAttributedTitle(attributedText, forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.init(red: 110.0/255.0, green: 93.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+        button.layer.cornerRadius = 5.0
+        
+        return button
+        
+    }()
+    
+    lazy private var orTextLabel: UILabel = {
+        let xPos: CGFloat = 0
+        let yPos: CGFloat = 0.691 * self.frame.height
+        let width: CGFloat = self.frame.width
+        let height: CGFloat = 18.0
+        
+        let label = UILabel.init(frame: CGRectMake(xPos, yPos, width, height))
+        label.text = "or"
+        label.font = UIFont.init(name: "HelveticaNeue-Light", size: 18.0 * self.iPhoneSizeScaleFactor)
+        label.textColor = UIColor.init(white: 1.0, alpha: 0.40)
+        label.textAlignment = NSTextAlignment.Center
+        
+        return label
+        
+    }()
+    
+    // override init method
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addSubview(self.mainTitleLabel)
+        self.addSubview(self.usernameInputField)
+        self.addSubview(self.passwordInputField)
+        self.addSubview(self.registerButton)
+        self.addSubview(self.orTextLabel)
+        self.addSubview(self.signInButton)
+        self.backgroundColor = UIColor.init(red: 59.0/255, green: 47.0/255, blue: 99.0/255, alpha: 1.0)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
