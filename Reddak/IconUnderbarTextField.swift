@@ -10,12 +10,16 @@ import UIKit
 
 class IconUnderbarTextField: UIView {
     
-    var iconFileName: String
-    var mainColor: RGBAColor
-    var attributedPlaceholder: NSAttributedString
-    var imageIconFrame: CGRect
+    // data variables 
     
-    lazy var textField: UITextField = {
+    private var iconFileName: String
+    private var mainColor: RGBAColor
+    private var attributedPlaceholder: NSAttributedString
+    private var imageIconFrame: CGRect
+    
+    // ui variables
+    
+    private lazy var textField: UITextField = {
         let width: CGFloat = (self.frame.width * 0.816) - 35.0
         let height: CGFloat = self.frame.height - 1.0
         let xPos: CGFloat = 35.0
@@ -29,7 +33,7 @@ class IconUnderbarTextField: UIView {
         return textField
     }()
     
-    lazy private var iconImageView: UIImageView = {
+    private lazy var iconImageView: UIImageView = {
         
         let imageView = UIImageView.init(frame: self.imageIconFrame)
         imageView.image = UIImage.init(named: self.iconFileName)
@@ -39,7 +43,7 @@ class IconUnderbarTextField: UIView {
         
     }()
     
-    lazy private var underbar: UIView = {
+    private lazy var underbar: UIView = {
         let width: CGFloat = self.frame.width
         let height: CGFloat = 1.0
         let xPos: CGFloat = 0.0
@@ -54,6 +58,8 @@ class IconUnderbarTextField: UIView {
         return view
         
     }()
+    
+    // initialization
     
     init(frame: CGRect, imageFileName: String, mainColor: RGBAColor, attributedPlaceholder: NSAttributedString, imageIconFrame: CGRect) {
         self.iconFileName = imageFileName
@@ -70,6 +76,12 @@ class IconUnderbarTextField: UIView {
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // accessor functions
+    
+    func getEnteredText() -> String? {
+        return self.textField.text
     }
 
 }

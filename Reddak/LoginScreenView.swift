@@ -8,49 +8,6 @@
 
 import UIKit
 
-struct RGBAColor {
-    let red, green, blue, alpha: CGFloat
-    
-    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-        self.red = red/255.0
-        self.green = green/255.0
-        self.blue = blue/255.0
-        self.alpha = alpha
-    }
-}
-
-struct Gradient {
-    private let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
-    private let colorComponents: [CGFloat]
-    private let locations: [CGFloat] = [0,1]
-    
-    let startCenter, endCenter: CGPoint
-    let startRadius, endRadius: CGFloat
-    
-    init(startCenter: CGPoint, endCenter: CGPoint, startRadius: CGFloat,
-         endRadius: CGFloat, firstColor: RGBAColor, secondColor: RGBAColor) {
-        self.startCenter = startCenter
-        self.endCenter = endCenter
-        self.startRadius = startRadius
-        self.endRadius = endRadius
-        self.colorComponents = [
-            firstColor.red, firstColor.green, firstColor.blue, firstColor.alpha,
-            secondColor.red, secondColor.green, secondColor.blue, secondColor.alpha
-        ]
-    }
-    
-    init(center startCenter: CGPoint, radius endRadius: CGFloat,
-                firstColor: RGBAColor, secondColor: RGBAColor) {
-        self.init(startCenter: startCenter, endCenter: startCenter,
-                  startRadius: 0, endRadius: endRadius, firstColor: firstColor,
-                  secondColor: secondColor)
-    }
-    
-    func gradient() -> CGGradientRef {
-        return CGGradientCreateWithColorComponents(colorSpace, colorComponents, locations, 2)!
-    }
-}
-
 class LoginScreenView: UIView {
     
     // background colors & gradients
@@ -129,7 +86,7 @@ class LoginScreenView: UIView {
         return self.frame.width / 375.0
     }()
     
-    lazy private var mainTitleLabel: UILabel = {
+    private lazy var mainTitleLabel: UILabel = {
         
         let width = self.frame.width
         let height: CGFloat = 50.0
@@ -145,7 +102,7 @@ class LoginScreenView: UIView {
         return label
     }()
     
-    lazy private var usernameInputField: IconUnderbarTextField = {
+    private lazy var usernameInputField: IconUnderbarTextField = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.354 * self.frame.height
@@ -169,7 +126,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var passwordInputField: IconUnderbarTextField = {
+    private lazy var passwordInputField: IconUnderbarTextField = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.465 * self.frame.height
@@ -193,7 +150,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var topButton: UIButton = {
+    private lazy var topButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.596 * self.frame.height
@@ -217,7 +174,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var bottomButton: UIButton = {
+    private lazy var bottomButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.737 * self.frame.height
@@ -241,7 +198,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    lazy private var orTextLabel: UILabel = {
+    private lazy var buttonSeperatorText: UILabel = {
         let xPos: CGFloat = 0
         let yPos: CGFloat = 0.691 * self.frame.height
         let width: CGFloat = self.frame.width
@@ -268,7 +225,7 @@ class LoginScreenView: UIView {
         self.addSubview(self.usernameInputField)
         self.addSubview(self.passwordInputField)
         self.addSubview(self.topButton)
-        self.addSubview(self.orTextLabel)
+        self.addSubview(self.buttonSeperatorText)
         self.addSubview(self.bottomButton)
         self.backgroundColor = UIColor.init(red: 59.0/255, green: 47.0/255, blue: 99.0/255, alpha: 1.0)
     }
@@ -276,15 +233,7 @@ class LoginScreenView: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // accessor methods
     
-    func assignFunctionToTopButton(selector: Selector) {
-        self.topButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
-    }
     
-    func assignFunctionToBottomButton(selector: Selector) {
-        self.bottomButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
-    }
     
 }
