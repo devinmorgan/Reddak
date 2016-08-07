@@ -10,18 +10,31 @@ import Foundation
 
 class LoginAndRegistrationModel {
 
-    func attemptToRegisterUser(username: String, password: String) {
+    enum TryingToRegisterAccountOutcomes {
+        case NotValidEmail
+        case NotAnMITEmail
+        case AlreadyRegisteredEmail
+        case UnregisteredEmail
+    }
+    
+    func registerUserWith(email username: String, password: String) -> TryingToRegisterAccountOutcomes {
+        //TODO: finish this method
         print("Register Account")
-        // take care of this later (this involves web dev stuff)
+        
+        return .NotValidEmail
+    }
+    
+    enum TryingToLoginOutcomes {
+        case NotValidEmail
+        case NotAnMITEmail
+        case RegisteredEmailWrongPassword
+        case RegisteredEmailAndPassword
     }
 
-    func attemptToSignInUser(username: String, password: String) {
+    func loginUserWith(email username: String, password: String) -> TryingToLoginOutcomes {
+        //TODO: finish this method
         print("Sign in to Account")
-        /*
-         1) send to server and process email & password
-         2.a) if valid email, password sign in (segue to feed)
-         2.b) if invalid email, password notify that it is the wrong email, password
-         and explain why
-         */
+        
+        return .RegisteredEmailAndPassword
     }
 }

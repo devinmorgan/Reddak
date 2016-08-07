@@ -102,7 +102,7 @@ class LoginScreenView: UIView {
         return label
     }()
     
-    private lazy var usernameInputField: IconUnderbarTextField = {
+    private lazy var emailInputField: IconUnderbarTextField = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.354 * self.frame.height
@@ -150,7 +150,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    private lazy var topButton: UIButton = {
+    private lazy var registerButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.596 * self.frame.height
@@ -174,7 +174,7 @@ class LoginScreenView: UIView {
         
     }()
     
-    private lazy var bottomButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         
         let xPos: CGFloat = 0.0933 * self.frame.width
         let yPos: CGFloat = 0.737 * self.frame.height
@@ -183,7 +183,7 @@ class LoginScreenView: UIView {
         
         let attributedText =
             NSAttributedString.init(
-                string: "Sign In",
+                string: "Login",
                 attributes: [
                     NSFontAttributeName: UIFont.init( name: "HelveticaNeue-Medium", size: 20.0 * self.iPhoneSizeScaleFactor)!,
                     NSForegroundColorAttributeName: UIColor.whiteColor()
@@ -222,11 +222,11 @@ class LoginScreenView: UIView {
         self.delegate = delegate
         super.init(frame: frame)
         self.addSubview(self.mainTitleLabel)
-        self.addSubview(self.usernameInputField)
+        self.addSubview(self.emailInputField)
         self.addSubview(self.passwordInputField)
-        self.addSubview(self.topButton)
+        self.addSubview(self.registerButton)
+        self.addSubview(self.loginButton)
         self.addSubview(self.buttonSeperatorText)
-        self.addSubview(self.bottomButton)
         self.backgroundColor = UIColor.init(red: 59.0/255, green: 47.0/255, blue: 99.0/255, alpha: 1.0)
     }
     
@@ -234,6 +234,22 @@ class LoginScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // public API
     
+    func getEmailText() -> String? {
+        return self.emailInputField.getEnteredText()
+    }
+    
+    func getPasswordText() -> String? {
+        return self.passwordInputField.getEnteredText()
+    }
+    
+    func setCallbackForRegisterButton(selector: Selector) {
+        self.registerButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+    }
+
+    func setCallbackForLoginButton(selector: Selector) {
+        self.loginButton.addTarget(self.delegate, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
+    }
     
 }
