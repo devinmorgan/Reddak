@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		225703501D5694350098321C /* LoginAndRegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2257034F1D5694350098321C /* LoginAndRegistrationModel.swift */; };
 		225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703511D5694CD0098321C /* ViewsHelperCode.swift */; };
+		225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703551D5706EA0098321C /* BackgroundGradientsView.swift */; };
+		225703581D5707BB0098321C /* RegistrationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703571D5707BB0098321C /* RegistrationScreenView.swift */; };
+		2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703591D5708E50098321C /* RegistrationScreenViewController.swift */; };
 		228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1EEE1D515C580071ABB4 /* AppDelegate.swift */; };
 		228B1EF41D515C580071ABB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF21D515C580071ABB4 /* Main.storyboard */; };
 		228B1EF61D515C580071ABB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF51D515C580071ABB4 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		2257034F1D5694350098321C /* LoginAndRegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndRegistrationModel.swift; sourceTree = "<group>"; };
 		225703511D5694CD0098321C /* ViewsHelperCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsHelperCode.swift; sourceTree = "<group>"; };
+		225703551D5706EA0098321C /* BackgroundGradientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundGradientsView.swift; sourceTree = "<group>"; };
+		225703571D5707BB0098321C /* RegistrationScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationScreenView.swift; sourceTree = "<group>"; };
+		225703591D5708E50098321C /* RegistrationScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationScreenViewController.swift; sourceTree = "<group>"; };
 		228B1EEB1D515C570071ABB4 /* Reddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228B1EEE1D515C580071ABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228B1EF31D515C580071ABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 				228B1F071D52B0FB0071ABB4 /* LoginScreenView.swift */,
 				228B1F0B1D53D1E70071ABB4 /* IconUnderbarTextField.swift */,
 				225703511D5694CD0098321C /* ViewsHelperCode.swift */,
+				225703551D5706EA0098321C /* BackgroundGradientsView.swift */,
+				225703571D5707BB0098321C /* RegistrationScreenView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */,
+				225703591D5708E50098321C /* RegistrationScreenViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,10 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */,
 				225703501D5694350098321C /* LoginAndRegistrationModel.swift in Sources */,
 				228B1F081D52B0FB0071ABB4 /* LoginScreenView.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */,
+				225703581D5707BB0098321C /* RegistrationScreenView.swift in Sources */,
+				2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
 				228B1F0C1D53D1E70071ABB4 /* IconUnderbarTextField.swift in Sources */,
 			);

@@ -34,7 +34,6 @@ class LoginScreenViewController: UIViewController {
     
     func tappedOnSignUpQuestionOrLink() {
         //TODO Segue to the Register View
-        print("Impliment me!")
     }
     
     func atteptToLoginUser() {
@@ -42,18 +41,21 @@ class LoginScreenViewController: UIViewController {
         let password: String = self.mainView.getPasswordText()!
         
         let actionToTake = self.model.loginUserWith(email: email, password: password)
-//        switch actionToTake {
-//        case "Email was not a valid email.":
-//            break
-//        case "Email not an MIT email.":
-//            break
-//        case "Registered MIT eamil but wrong password":
-//            break
-//        case "Correct MIT email & password":
-//            break
-//        default:
-//            break
-//        }
+        switch actionToTake {
+        case .NotValidEmail:
+            break
+        case .NotAnMITEmail:
+            break
+        case .RegisteredEmailWrongPassword:
+            break
+        case .Success:
+            self.segueToRegistrationPage()
+        }
+        
+    }
+    
+    func segueToRegistrationPage() {
+        print("Segue to registration page")
     }
     
 }
