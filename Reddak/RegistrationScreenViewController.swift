@@ -8,18 +8,18 @@
 
 import UIKit
 
-class RegistrationScreenViewController: UIViewController {
+class RegistrationScreenViewController: UIViewController, UIScrollViewDelegate {
 
     // vars and lets
     
-    var model = LoginAndRegistrationModel()
-//    lazy var mainView: RegistrationScreenView! = { return self.view as! RegistrationScreenView }()
+    @IBOutlet weak var formScrollView: UIScrollView!
+    
     
     // housekeeping
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view = RegistrationScreenView.init(frame: self.view.frame, delegate: self)
+        self.formScrollView.delegate = self
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
@@ -27,5 +27,7 @@ class RegistrationScreenViewController: UIViewController {
         super.viewWillDisappear(animated)
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
+    
+    
 
 }
