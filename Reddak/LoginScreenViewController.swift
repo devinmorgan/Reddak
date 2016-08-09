@@ -33,7 +33,7 @@ class LoginScreenViewController: UIViewController {
     // main functions
     
     func tappedOnSignUpQuestionOrLink() {
-        //TODO Segue to the Register View
+        self.performSegueWithIdentifier("LoginRegisterSegue", sender: nil)
     }
     
     func atteptToLoginUser() {
@@ -49,14 +49,22 @@ class LoginScreenViewController: UIViewController {
         case .RegisteredEmailWrongPassword:
             break
         case .Success:
-            self.segueToRegistrationPage()
+            break
         }
         
     }
     
-    func segueToRegistrationPage() {
-        print("Segue to registration page")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController
+        if let registerVC = destinationVC as? RegistrationScreenView {
+            print("going to registration")
+        }
+        else if let loginVC = destinationVC as? LoginScreenViewController {
+            print("going to login")
+        }
     }
+    
+    
     
 }
 
