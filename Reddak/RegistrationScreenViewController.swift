@@ -8,11 +8,17 @@
 
 import UIKit
 
-class RegistrationScreenViewController: UIViewController, UIScrollViewDelegate {
+class RegistrationScreenViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
 
     // vars and lets
     
+    @IBAction func testFunctionForTestButton() {
+        print("this is another test")
+    }
     @IBOutlet weak var formScrollView: UIScrollView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var repeatPasswordField: UITextField!
     
     
     // housekeeping
@@ -20,6 +26,7 @@ class RegistrationScreenViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.formScrollView.delegate = self
+        self.emailField.delegate = self
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
@@ -28,6 +35,9 @@ class RegistrationScreenViewController: UIViewController, UIScrollViewDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
     
+    @IBAction func testFunction() {
+        print("hello world")
+    }
     
 
 }
