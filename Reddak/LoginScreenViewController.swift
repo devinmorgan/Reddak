@@ -25,15 +25,10 @@ class LoginScreenViewController: UIViewController {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-    }
-    
     // main functions
     
     func tappedOnSignUpQuestionOrLink() {
-        self.performSegueWithIdentifier("LoginRegisterSegue", sender: nil)
+        self.performSegueWithIdentifier("LoginToRegisterSegue", sender: nil)
     }
     
     func atteptToLoginUser() {
