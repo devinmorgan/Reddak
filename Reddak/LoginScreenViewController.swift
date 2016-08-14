@@ -13,15 +13,15 @@ class LoginScreenViewController: UIViewController {
     // vars and lets
     
     var model = LoginAndRegistrationModel()
-    lazy var mainView: LoginScreenView! = { return self.view as! LoginScreenView }()
+//    lazy var mainView: LoginScreenView! = { return self.view as! LoginScreenView }()
     
     // housekeeping
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = LoginScreenView.init(frame: self.view.frame, delegate: self)
-        self.mainView.setCallbackForLoginButton(#selector(atteptToLoginUser))
-        self.mainView.setCallbackForSignUpLink(#selector(tappedOnSignUpQuestionOrLink))
+//        self.view = LoginScreenView.init(frame: self.view.frame, delegate: self)
+//        self.mainView.setCallbackForLoginButton(#selector(atteptToLoginUser))
+//        self.mainView.setCallbackForSignUpLink(#selector(tappedOnSignUpQuestionOrLink))
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
@@ -32,20 +32,21 @@ class LoginScreenViewController: UIViewController {
     }
     
     func atteptToLoginUser() {
-        let email: String = self.mainView.getEmailText()!
-        let password: String = self.mainView.getPasswordText()!
         
-        let actionToTake = self.model.loginUserWith(email: email, password: password)
-        switch actionToTake {
-        case .NotValidEmail:
-            break
-        case .NotAnMITEmail:
-            break
-        case .RegisteredEmailWrongPassword:
-            break
-        case .Success:
-            break
-        }
+//        let email: String = self.mainView.getEmailText()!
+//        let password: String = self.mainView.getPasswordText()!
+//        
+//        let actionToTake = self.model.loginUserWith(email: email, password: password)
+//        switch actionToTake {
+//        case .NotValidEmail:
+//            break
+//        case .NotAnMITEmail:
+//            break
+//        case .RegisteredEmailWrongPassword:
+//            break
+//        case .Success:
+//            break
+//        }
         
     }
     

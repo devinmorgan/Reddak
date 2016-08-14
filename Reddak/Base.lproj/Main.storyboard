@@ -14,9 +14,154 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BackgroundGradientsView" customModule="Reddak" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NV7-Bh-TGZ">
+                                <rect key="frame" x="-20" y="-20" width="184" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reddak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbv-9C-MGp" userLabel="PageTitle">
+                                        <rect key="frame" x="20" y="20" width="144" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-MF-eiE" userLabel="MIT Email">
+                                        <rect key="frame" x="20" y="20" width="0.0" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTb-1M-l5c" userLabel="Field Bottom Border">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="ncl-gJ-ghV">
+                                                        <variation key="widthClass=compact" constant="1"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="ncl-gJ-ghV"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="ncl-gJ-ghV"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UsernameLoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-eX-Wq6">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="OYL-NP-D3b"/>
+                                                    <constraint firstAttribute="width" constant="18" id="edZ-Ax-xlL"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="OYL-NP-D3b"/>
+                                                        <exclude reference="edZ-Ax-xlL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="OYL-NP-D3b"/>
+                                                        <include reference="edZ-Ax-xlL"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MIT Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30I-a8-NWt" userLabel="Textfield">
+                                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="29" y="9" width="219" height="33"/>
+                                                </variation>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="30I-a8-NWt" firstAttribute="leading" secondItem="IjX-MF-eiE" secondAttribute="leading" constant="29" id="5Ja-xN-ZzF"/>
+                                            <constraint firstAttribute="height" constant="50" id="BgM-M1-UcT"/>
+                                            <constraint firstAttribute="bottom" secondItem="KTb-1M-l5c" secondAttribute="bottom" constant="50" id="MID-bf-cqU">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
+                                            <constraint firstItem="KTb-1M-l5c" firstAttribute="leading" secondItem="IjX-MF-eiE" secondAttribute="leading" id="Out-l6-foa"/>
+                                            <constraint firstItem="KTb-1M-l5c" firstAttribute="width" secondItem="IjX-MF-eiE" secondAttribute="width" id="W8E-Mb-BYa"/>
+                                            <constraint firstItem="rbE-eX-Wq6" firstAttribute="leading" secondItem="IjX-MF-eiE" secondAttribute="leading" constant="-32" id="bFo-ZZ-RYQ">
+                                                <variation key="widthClass=compact" constant="3"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="KTb-1M-l5c" secondAttribute="trailing" id="cq1-I1-ofW"/>
+                                            <constraint firstItem="rbE-eX-Wq6" firstAttribute="top" secondItem="IjX-MF-eiE" secondAttribute="top" constant="-267" id="gDM-Ng-YQk">
+                                                <variation key="widthClass=compact" constant="9"/>
+                                            </constraint>
+                                            <constraint firstItem="30I-a8-NWt" firstAttribute="centerY" secondItem="IjX-MF-eiE" secondAttribute="centerY" id="nMG-MW-fRV"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="KTb-1M-l5c"/>
+                                                <exclude reference="rbE-eX-Wq6"/>
+                                                <exclude reference="30I-a8-NWt"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="BgM-M1-UcT"/>
+                                                <exclude reference="bFo-ZZ-RYQ"/>
+                                                <exclude reference="gDM-Ng-YQk"/>
+                                                <exclude reference="5Ja-xN-ZzF"/>
+                                                <exclude reference="nMG-MW-fRV"/>
+                                                <exclude reference="MID-bf-cqU"/>
+                                                <exclude reference="Out-l6-foa"/>
+                                                <exclude reference="W8E-Mb-BYa"/>
+                                                <exclude reference="cq1-I1-ofW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="KTb-1M-l5c"/>
+                                                <include reference="rbE-eX-Wq6"/>
+                                                <include reference="30I-a8-NWt"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="BgM-M1-UcT"/>
+                                                <include reference="bFo-ZZ-RYQ"/>
+                                                <include reference="gDM-Ng-YQk"/>
+                                                <include reference="5Ja-xN-ZzF"/>
+                                                <include reference="nMG-MW-fRV"/>
+                                                <include reference="MID-bf-cqU"/>
+                                                <include reference="Out-l6-foa"/>
+                                                <include reference="W8E-Mb-BYa"/>
+                                                <include reference="cq1-I1-ofW"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <variation key="widthClass=compact" alignment="top" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.15294117647058825" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NV7-Bh-TGZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="651-t1-OXm"/>
+                            <constraint firstItem="IjX-MF-eiE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="TBp-Qx-LWX"/>
+                            <constraint firstItem="NV7-Bh-TGZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="owM-VP-Zki"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="651-t1-OXm"/>
+                                <exclude reference="owM-VP-Zki"/>
+                                <exclude reference="TBp-Qx-LWX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="651-t1-OXm"/>
+                                <include reference="owM-VP-Zki"/>
+                                <include reference="TBp-Qx-LWX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <segue destination="3ix-Qg-jda" kind="show" identifier="LoginToRegisterSegue" id="fLt-Cf-nP3"/>
@@ -24,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="450"/>
+            <point key="canvasLocation" x="-237" y="450"/>
         </scene>
         <!--Registration Screen View Controller-->
         <scene sceneID="eoJ-wF-xId">
@@ -34,7 +179,7 @@
                         <viewControllerLayoutGuide type="top" id="hHb-o4-6hu"/>
                         <viewControllerLayoutGuide type="bottom" id="FJb-dT-iXD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="j55-Pb-qCq" customClass="RegistrationScreenView" customModule="Reddak" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="j55-Pb-qCq" customClass="BackgroundGradientsView" customModule="Reddak" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -468,4 +613,7 @@
             <point key="canvasLocation" x="460.5" y="469"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UsernameLoginIcon" width="94" height="128"/>
+    </resources>
 </document>
