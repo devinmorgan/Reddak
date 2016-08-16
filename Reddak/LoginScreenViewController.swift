@@ -13,51 +13,24 @@ class LoginScreenViewController: UIViewController {
     // vars and lets
     
     var model = LoginAndRegistrationModel()
-//    lazy var mainView: LoginScreenView! = { return self.view as! LoginScreenView }()
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     // housekeeping
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view = LoginScreenView.init(frame: self.view.frame, delegate: self)
-//        self.mainView.setCallbackForLoginButton(#selector(atteptToLoginUser))
-//        self.mainView.setCallbackForSignUpLink(#selector(tappedOnSignUpQuestionOrLink))
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
     
     // main functions
-    
-    func tappedOnSignUpQuestionOrLink() {
-        self.performSegueWithIdentifier("LoginToRegisterSegue", sender: nil)
-    }
-    
-    func atteptToLoginUser() {
-        
-//        let email: String = self.mainView.getEmailText()!
-//        let password: String = self.mainView.getPasswordText()!
-//        
-//        let actionToTake = self.model.loginUserWith(email: email, password: password)
-//        switch actionToTake {
-//        case .NotValidEmail:
-//            break
-//        case .NotAnMITEmail:
-//            break
-//        case .RegisteredEmailWrongPassword:
-//            break
-//        case .Success:
-//            break
-//        }
-        
+    @IBAction func attemptToLoginUser() {
+        self.model.loginUserWith(email: self.emailField.text!, password: self.passwordField.text!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController
-//        if let registerVC = destinationVC as? RegistrationScreenView {
-//            print("going to registration")
-//        }
-//        else if let loginVC = destinationVC as? LoginScreenViewController {
-//            print("going to login")
-//        }
+
     }
     
     

@@ -19,7 +19,7 @@ class LoginAndRegistrationModel {
 
     func loginUserWith(email username: String, password: String) -> TryingToLoginOutcomes {
         //TODO: finish this method
-        
+        print("Username: \(username) \nPassword: \(password)\n\n\n")
         return .Success
     }
     
@@ -31,9 +31,9 @@ class LoginAndRegistrationModel {
         case Success
     }
     
-    func registerUserWith(email username: String, password: String) -> TryingToRegisterAccountOutcomes {
+    func registerUserWith(email username: String, password: String, repeatPassword: String) -> TryingToRegisterAccountOutcomes {
         //TODO: finish this method
-        
+        print("Username: \(username) \nPassword: \(password) \nRepeat Password: \(repeatPassword) \n\n\n")
         return .Success
     }
     
