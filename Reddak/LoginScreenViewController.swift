@@ -52,12 +52,12 @@ class LoginScreenViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController
-        if let registerVC = destinationVC as? RegistrationScreenView {
-            print("going to registration")
-        }
-        else if let loginVC = destinationVC as? LoginScreenViewController {
-            print("going to login")
-        }
+//        if let registerVC = destinationVC as? RegistrationScreenView {
+//            print("going to registration")
+//        }
+//        else if let loginVC = destinationVC as? LoginScreenViewController {
+//            print("going to login")
+//        }
     }
     
     
