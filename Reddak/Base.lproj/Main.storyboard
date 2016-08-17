@@ -18,20 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vP7-cs-Xxf" userLabel="Content View">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vP7-cs-Xxf" userLabel="Content View">
                                 <rect key="frame" x="12" y="-20" width="296" height="437"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reddak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-ax-XYF">
-                                        <rect key="frame" x="68" y="20" width="159.5" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-gt-qEA">
-                                        <rect key="frame" x="20" y="165" width="256" height="120"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eXN-gt-qEA">
+                                        <rect key="frame" x="20" y="165" width="532" height="50"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-D9-Lr4" userLabel="Email">
-                                                <rect key="frame" x="20" y="20" width="256" height="50"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-D9-Lr4" userLabel="Email">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UsernameLoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-jK-CzZ" userLabel="Icon">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -41,18 +35,18 @@
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
-                                                                <exclude reference="aQF-Fi-Xdl"/>
                                                                 <exclude reference="Od4-a6-Mve"/>
+                                                                <exclude reference="aQF-Fi-Xdl"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="widthClass=compact">
                                                             <mask key="constraints">
-                                                                <include reference="aQF-Fi-Xdl"/>
                                                                 <include reference="Od4-a6-Mve"/>
+                                                                <include reference="aQF-Fi-Xdl"/>
                                                             </mask>
                                                         </variation>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-9J-VoJ" userLabel="Border">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-9J-VoJ" userLabel="Border">
                                                         <rect key="frame" x="20" y="58" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -69,7 +63,7 @@
                                                             </mask>
                                                         </variation>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MIT Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-fz-lQg" userLabel="TextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MIT Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-fz-lQg" userLabel="TextField">
                                                         <rect key="frame" x="54" y="20" width="206" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="49" id="p1k-cP-VgY"/>
@@ -123,15 +117,15 @@
                                                     </mask>
                                                     <mask key="constraints">
                                                         <exclude reference="634-e1-yW0"/>
+                                                        <exclude reference="fjo-tX-j5G"/>
+                                                        <exclude reference="jL6-pI-Sdf"/>
                                                         <exclude reference="Riz-C0-UCS"/>
                                                         <exclude reference="p86-8X-Kmx"/>
                                                         <exclude reference="wSK-qx-TdQ"/>
-                                                        <exclude reference="Z79-SH-UdM"/>
-                                                        <exclude reference="KzV-Uc-KOD"/>
-                                                        <exclude reference="KcF-sC-sAW"/>
                                                         <exclude reference="7LX-Ei-CM6"/>
-                                                        <exclude reference="fjo-tX-j5G"/>
-                                                        <exclude reference="jL6-pI-Sdf"/>
+                                                        <exclude reference="KcF-sC-sAW"/>
+                                                        <exclude reference="KzV-Uc-KOD"/>
+                                                        <exclude reference="Z79-SH-UdM"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact">
@@ -140,20 +134,20 @@
                                                     </mask>
                                                     <mask key="constraints">
                                                         <include reference="634-e1-yW0"/>
+                                                        <include reference="fjo-tX-j5G"/>
+                                                        <include reference="jL6-pI-Sdf"/>
                                                         <include reference="Riz-C0-UCS"/>
                                                         <include reference="p86-8X-Kmx"/>
                                                         <include reference="wSK-qx-TdQ"/>
-                                                        <include reference="Z79-SH-UdM"/>
-                                                        <include reference="KzV-Uc-KOD"/>
-                                                        <include reference="KcF-sC-sAW"/>
                                                         <include reference="7LX-Ei-CM6"/>
-                                                        <include reference="fjo-tX-j5G"/>
-                                                        <include reference="jL6-pI-Sdf"/>
+                                                        <include reference="KcF-sC-sAW"/>
+                                                        <include reference="KzV-Uc-KOD"/>
+                                                        <include reference="Z79-SH-UdM"/>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-4u-JPl" userLabel="Password">
-                                                <rect key="frame" x="20" y="70" width="256" height="50"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-4u-JPl" userLabel="Password">
+                                                <rect key="frame" x="276" y="0.0" width="256" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordLoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sun-sR-uQT" userLabel="Icon">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -174,7 +168,7 @@
                                                             </mask>
                                                         </variation>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdK-Ko-Iem" userLabel="Border">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdK-Ko-Iem" userLabel="Border">
                                                         <rect key="frame" x="20" y="58" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -191,7 +185,7 @@
                                                             </mask>
                                                         </variation>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-y3-LDs" userLabel="TextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-y3-LDs" userLabel="TextField">
                                                         <rect key="frame" x="54" y="20" width="206" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="49" id="bde-bT-JT3"/>
@@ -245,6 +239,8 @@
                                                     </mask>
                                                     <mask key="constraints">
                                                         <exclude reference="cnv-9a-NWT"/>
+                                                        <exclude reference="EcA-VX-yU6"/>
+                                                        <exclude reference="WOB-WO-gjk"/>
                                                         <exclude reference="MCM-z2-3Rq"/>
                                                         <exclude reference="l05-Lo-1b8"/>
                                                         <exclude reference="rHF-1S-5lh"/>
@@ -252,8 +248,6 @@
                                                         <exclude reference="R5t-lj-MZL"/>
                                                         <exclude reference="Xbh-yy-kvd"/>
                                                         <exclude reference="Y5Z-pr-Vfd"/>
-                                                        <exclude reference="EcA-VX-yU6"/>
-                                                        <exclude reference="WOB-WO-gjk"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact">
@@ -262,6 +256,8 @@
                                                     </mask>
                                                     <mask key="constraints">
                                                         <include reference="cnv-9a-NWT"/>
+                                                        <include reference="EcA-VX-yU6"/>
+                                                        <include reference="WOB-WO-gjk"/>
                                                         <include reference="MCM-z2-3Rq"/>
                                                         <include reference="l05-Lo-1b8"/>
                                                         <include reference="rHF-1S-5lh"/>
@@ -269,15 +265,13 @@
                                                         <include reference="R5t-lj-MZL"/>
                                                         <include reference="Xbh-yy-kvd"/>
                                                         <include reference="Y5Z-pr-Vfd"/>
-                                                        <include reference="EcA-VX-yU6"/>
-                                                        <include reference="WOB-WO-gjk"/>
                                                     </mask>
                                                 </variation>
                                             </view>
                                         </subviews>
                                         <variation key="widthClass=compact" axis="vertical"/>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-X4-Nz7" userLabel="Log In Button">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-X4-Nz7" userLabel="Log In Button">
                                         <rect key="frame" x="20" y="314" width="256" height="50"/>
                                         <color key="backgroundColor" red="0.43137254899999999" green="0.36470588240000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -308,11 +302,11 @@
                                             <action selector="attemptToLoginUser" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKq-Zl-9Sr"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-IN-km5" userLabel="Register Question Linnk">
-                                        <rect key="frame" x="28" y="293" width="190" height="57"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-IN-km5" userLabel="Register Question Linnk">
+                                        <rect key="frame" x="28" y="293" width="158" height="29"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to Reddak?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-5H-5lL">
-                                                <rect key="frame" x="20" y="20" width="105" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="New to Reddak?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-5H-5lL">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" red="0.43137254899999999" green="0.36470588240000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -320,8 +314,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="104" height="29"/>
                                                 </variation>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-eI-uwe">
-                                                <rect key="frame" x="124" y="20" width="46" height="17"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-eI-uwe">
+                                                <rect key="frame" x="109" y="0.0" width="49" height="29"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Sign Up">
@@ -345,6 +339,15 @@
                                             <rect key="frame" x="49" y="306" width="158" height="29"/>
                                         </variation>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Reddak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-ax-XYF">
+                                        <rect key="frame" x="68" y="20" width="159.5" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="47" y="0.0" width="159.5" height="60"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -374,13 +377,13 @@
                                         <exclude reference="6iI-Du-6iW"/>
                                         <exclude reference="vzj-e5-YP4"/>
                                         <exclude reference="Swh-yb-Tls"/>
-                                        <exclude reference="Cop-Vc-hkB"/>
-                                        <exclude reference="Wc8-wp-J3O"/>
-                                        <exclude reference="ijI-VH-aou"/>
                                         <exclude reference="R4V-Qx-QBt"/>
                                         <exclude reference="SQK-Nz-Diu"/>
                                         <exclude reference="Yzx-3u-DmV"/>
                                         <exclude reference="fgg-Gd-xcE"/>
+                                        <exclude reference="Cop-Vc-hkB"/>
+                                        <exclude reference="Wc8-wp-J3O"/>
+                                        <exclude reference="ijI-VH-aou"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -392,13 +395,13 @@
                                         <include reference="6iI-Du-6iW"/>
                                         <include reference="vzj-e5-YP4"/>
                                         <include reference="Swh-yb-Tls"/>
-                                        <include reference="Cop-Vc-hkB"/>
-                                        <include reference="Wc8-wp-J3O"/>
-                                        <include reference="ijI-VH-aou"/>
                                         <exclude reference="R4V-Qx-QBt"/>
                                         <include reference="SQK-Nz-Diu"/>
                                         <include reference="Yzx-3u-DmV"/>
                                         <exclude reference="fgg-Gd-xcE"/>
+                                        <include reference="Cop-Vc-hkB"/>
+                                        <include reference="Wc8-wp-J3O"/>
+                                        <include reference="ijI-VH-aou"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -427,11 +430,74 @@
                     <connections>
                         <outlet property="emailField" destination="gmA-fz-lQg" id="lUf-Tn-XXQ"/>
                         <outlet property="passwordField" destination="I0Q-y3-LDs" id="AhJ-bT-xvM"/>
+                        <segue destination="kcx-Kr-KSN" kind="show" identifier="LogInToHomeView" id="guO-vO-kFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="469"/>
+            <point key="canvasLocation" x="-913.5" y="391"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4C9-Gi-8R3">
+            <objects>
+                <viewController id="2Mr-N2-hdN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HnT-gO-ugw"/>
+                        <viewControllerLayoutGuide type="bottom" id="sHt-Df-f6h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HSS-qH-57C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jJ7-ML-Uxd">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerIcon" style="plain" id="tbH-69-GTV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SM0-dF-UKT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="HamburgerIcon"/>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m2b-vS-2pm">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="MIT Main">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" image="InfoIcon" style="plain" id="mJB-sz-hdi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tnW-DS-Cu0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="InfoIcon"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9n-0H-C3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="391"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cJU-yL-5hD">
+            <objects>
+                <tabBarController id="kcx-Kr-KSN" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fxo-QX-Ml6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pJr-i3-cgC" kind="relationship" relationship="viewControllers" id="M0E-kP-h0L"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oi-kY-5gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="391"/>
         </scene>
         <!--Registration Screen View Controller-->
         <scene sceneID="eoJ-wF-xId">
@@ -662,7 +728,7 @@
                                                                     <rect key="frame" x="169" y="0.0" width="38" height="29"/>
                                                                 </variation>
                                                                 <connections>
-                                                                    <segue destination="BYZ-38-t0r" kind="show" id="cVS-Fn-1w6"/>
+                                                                    <segue destination="BYZ-38-t0r" kind="show" id="JUT-CH-b1U"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -841,10 +907,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="az1-it-IN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457.5" y="469"/>
+            <point key="canvasLocation" x="-913.5" y="994"/>
+        </scene>
+        <!--Feeds-->
+        <scene sceneID="Z1R-ZB-rlf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pJr-i3-cgC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feeds" image="FeedsIconUnselected" selectedImage="FeedsIconSelected" id="qHa-A7-VSq">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.43137254899999999" green="0.36470588240000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <keyCommands/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YqF-is-Gre">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="An3-Hx-KJC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navigationBar.barTintColor">
+                            <color key="value" red="0.43137254899999999" green="0.36470588240000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="navigationBar.translucent" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="2Mr-N2-hdN" kind="relationship" relationship="rootViewController" id="TeN-7T-bLk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2O-MO-9g3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="391"/>
         </scene>
     </scenes>
     <resources>
+        <image name="FeedsIconSelected" width="21" height="22"/>
+        <image name="FeedsIconUnselected" width="26" height="26"/>
+        <image name="HamburgerIcon" width="30" height="19"/>
+        <image name="InfoIcon" width="30" height="30"/>
         <image name="PasswordLoginIcon" width="120" height="136"/>
         <image name="UsernameLoginIcon" width="94" height="128"/>
     </resources>

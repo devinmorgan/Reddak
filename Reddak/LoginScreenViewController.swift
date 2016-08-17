@@ -24,8 +24,12 @@ class LoginScreenViewController: UIViewController {
     }
     
     // main functions
+    
     @IBAction func attemptToLoginUser() {
-        self.model.loginUserWith(email: self.emailField.text!, password: self.passwordField.text!)
+        let loginResult = self.model.loginUserWith(email: self.emailField.text!, password: self.passwordField.text!)
+        if loginResult == .Success {
+            self.performSegueWithIdentifier("LogInToHomeView", sender: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
