@@ -16,6 +16,7 @@
 		228B1EF61D515C580071ABB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF51D515C580071ABB4 /* Assets.xcassets */; };
 		228B1EF91D515C580071ABB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */; };
 		228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */; };
+		228EC8131D66424B00A98F70 /* FeedInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		228B1EF81D515C580071ABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		228B1EFA1D515C580071ABB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		228B1F061D52B09E0071ABB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */,
 				228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */,
 				225703591D5708E50098321C /* RegistrationScreenViewController.swift */,
 			);
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228EC8131D66424B00A98F70 /* FeedInfoTableViewController.swift in Sources */,
 				225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */,
 				225703501D5694350098321C /* LoginAndRegistrationModel.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
