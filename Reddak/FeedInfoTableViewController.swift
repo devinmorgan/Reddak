@@ -14,13 +14,19 @@ class FeedInfoTableViewController: UITableViewController {
     let greyColor = UIColor.init(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1)
     let lightGreyColor = UIColor.init(white: 240.0/255.0, alpha: 1.0)
 
+    let textIndent: CGFloat = 15.0
+    let headerSectionheight: CGFloat = 42.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     // MARK: - Table view data source
@@ -46,9 +52,9 @@ class FeedInfoTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let boldFont = UIFont.boldSystemFontOfSize(18)
+        let sectionHeaderLabelHeight: CGFloat = 22.0
         
-        let label = UILabel.init(frame: CGRectMake(15, 10, self.tableView.frame.size.width, 22.0))
-//        let label = UILabel.init()
+        let label = UILabel.init(frame: CGRectMake(textIndent, 10, self.tableView.frame.size.width, sectionHeaderLabelHeight))
         label.textColor = purpleColor
         label.font = boldFont
         label.backgroundColor = UIColor.clearColor()
@@ -64,19 +70,17 @@ class FeedInfoTableViewController: UITableViewController {
             label.text = "Default"
         }
         
-        let mainView = UIView.init(frame: CGRectMake(0, 0, self.tableView.frame.size.width, 42.0))
+        let mainView = UIView.init(frame: CGRectMake(0, 0, self.tableView.frame.size.width, headerSectionheight))
         mainView.addSubview(label)
         
-        
         return mainView
-//        return label
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let normalFont = UIFont.init(name: "System-Regular", size: 14)
         let textContent = "This is the main feed for MIT. Every MIT member can view and make posts here."
         
-        let textView = UITextView.init(frame: CGRectMake(15, 0, self.tableView.frame.size.width - 30.0, 30.0))
+        let textView = UITextView.init(frame: CGRectMake(textIndent, 0, self.tableView.frame.size.width - 2*textIndent, 30.0))
         textView.textColor = greyColor
         textView.font = normalFont
         textView.text = textContent
@@ -99,7 +103,10 @@ class FeedInfoTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 42.0
+        if (section > 0 ) {
+            return headerSectionheight
+        }
+        return headerSectionheight - 5
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -112,11 +119,22 @@ class FeedInfoTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ReuseIdentifier", forIndexPath: indexPath)
+        var reuseIdentifier = ""
 
-        // Configure the cell...
+        switch (indexPath.section,indexPath.row) {
+        case (1,0):
+            reuseIdentifier = "MembersCount"
+        case (1,1):
+            reuseIdentifier = "NumberOfPosts"
+        case (1,2):
+            reuseIdentifier = "FeedStartDate"
+        case (2,0):
+            reuseIdentifier = "JoinGroup"
+        default:
+            reuseIdentifier = "ReuseIdentifier"
+        }
 
-        return cell
+        return tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
     }
 
     /*
