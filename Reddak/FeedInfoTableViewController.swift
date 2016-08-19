@@ -47,7 +47,8 @@ class FeedInfoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let boldFont = UIFont.boldSystemFontOfSize(18)
         
-        let label = UILabel.init()
+        let label = UILabel.init(frame: CGRectMake(15, 10, self.tableView.frame.size.width, 22.0))
+//        let label = UILabel.init()
         label.textColor = purpleColor
         label.font = boldFont
         label.backgroundColor = UIColor.clearColor()
@@ -63,25 +64,32 @@ class FeedInfoTableViewController: UITableViewController {
             label.text = "Default"
         }
         
-        return label
+        let mainView = UIView.init(frame: CGRectMake(0, 0, self.tableView.frame.size.width, 42.0))
+        mainView.addSubview(label)
+        
+        
+        return mainView
+//        return label
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let normalFont = UIFont.init(name: "System-Regular", size: 14)
         let textContent = "This is the main feed for MIT. Every MIT member can view and make posts here."
         
-        let textView = UITextView.init()
+        let textView = UITextView.init(frame: CGRectMake(15, 0, self.tableView.frame.size.width - 30.0, 30.0))
         textView.textColor = greyColor
         textView.font = normalFont
         textView.text = textContent
         textView.backgroundColor = UIColor.clearColor()
         textView.textContainer.lineFragmentPadding = 0
+        textView.textContainerInset = UIEdgeInsetsZero
         textView.editable = false
-        
         
         switch section {
         case 0:
-            return textView
+            let mainView = UIView.init(frame: CGRectMake(0, 0, self.tableView.frame.size.width, 30.0))
+            mainView.addSubview(textView)
+            return mainView
         default:
             let view = UIView.init()
             view.backgroundColor = UIColor.clearColor()
@@ -91,15 +99,15 @@ class FeedInfoTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 22.0
+        return 42.0
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return 50.0
+            return 30.0
         default:
-            return 20.0
+            return 10.0
         }
     }
     
