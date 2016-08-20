@@ -17,6 +17,11 @@
 		228B1EF91D515C580071ABB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF71D515C580071ABB4 /* LaunchScreen.storyboard */; };
 		228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */; };
 		228EC8131D66424B00A98F70 /* FeedInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */; };
+		228EC8151D67D0A400A98F70 /* TopicFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8141D67D0A400A98F70 /* TopicFeedTableViewController.swift */; };
+		228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8161D67DC0D00A98F70 /* PostImageInspectorViewController.swift */; };
+		22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */; };
+		22D759401D691427003ED447 /* VoteCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593F1D691427003ED447 /* VoteCounterView.swift */; };
+		22D759421D692301003ED447 /* PostBottomSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D759411D692301003ED447 /* PostBottomSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		228B1EFA1D515C580071ABB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedInfoTableViewController.swift; sourceTree = "<group>"; };
+		228EC8141D67D0A400A98F70 /* TopicFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicFeedTableViewController.swift; sourceTree = "<group>"; };
+		228EC8161D67DC0D00A98F70 /* PostImageInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageInspectorViewController.swift; sourceTree = "<group>"; };
+		22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostTableViewCell.swift; sourceTree = "<group>"; };
+		22D7593F1D691427003ED447 /* VoteCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCounterView.swift; sourceTree = "<group>"; };
+		22D759411D692301003ED447 /* PostBottomSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBottomSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +74,12 @@
 		228B1EED1D515C580071ABB4 /* Reddak */ = {
 			isa = PBXGroup;
 			children = (
-				228B1F061D52B09E0071ABB4 /* Controller */,
-				228B1F051D52B0980071ABB4 /* View */,
-				228B1F041D52B0920071ABB4 /* Model */,
-				228B1F001D515E9E0071ABB4 /* Support Files */,
+				228B1EF21D515C580071ABB4 /* Main.storyboard */,
+				2257034F1D5694350098321C /* LoginAndRegistrationModel.swift */,
+				22D759391D690DB1003ED447 /* NewsFeedScreen */,
+				22D759381D690D90003ED447 /* RegistrationScreen */,
+				22D759371D690D78003ED447 /* LogInScreen */,
+				228B1F051D52B0980071ABB4 /* Universal */,
 			);
 			path = Reddak;
 			sourceTree = "<group>";
@@ -83,32 +95,51 @@
 			name = "Support Files";
 			sourceTree = "<group>";
 		};
-		228B1F041D52B0920071ABB4 /* Model */ = {
+		228B1F051D52B0980071ABB4 /* Universal */ = {
 			isa = PBXGroup;
 			children = (
-				2257034F1D5694350098321C /* LoginAndRegistrationModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		228B1F051D52B0980071ABB4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				228B1EF21D515C580071ABB4 /* Main.storyboard */,
+				228B1F001D515E9E0071ABB4 /* Support Files */,
 				225703511D5694CD0098321C /* ViewsHelperCode.swift */,
 				225703551D5706EA0098321C /* BackgroundGradientsView.swift */,
 			);
-			name = View;
+			name = Universal;
 			sourceTree = "<group>";
 		};
-		228B1F061D52B09E0071ABB4 /* Controller */ = {
+		22D759371D690D78003ED447 /* LogInScreen */ = {
 			isa = PBXGroup;
 			children = (
-				228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */,
 				228B1F091D52B18F0071ABB4 /* LoginScreenViewController.swift */,
+			);
+			name = LogInScreen;
+			sourceTree = "<group>";
+		};
+		22D759381D690D90003ED447 /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
 				225703591D5708E50098321C /* RegistrationScreenViewController.swift */,
 			);
-			name = Controller;
+			name = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		22D759391D690DB1003ED447 /* NewsFeedScreen */ = {
+			isa = PBXGroup;
+			children = (
+				22D7593E1D6913FF003ED447 /* Posts */,
+				228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */,
+				228EC8141D67D0A400A98F70 /* TopicFeedTableViewController.swift */,
+				228EC8161D67DC0D00A98F70 /* PostImageInspectorViewController.swift */,
+			);
+			name = NewsFeedScreen;
+			sourceTree = "<group>";
+		};
+		22D7593E1D6913FF003ED447 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */,
+				22D7593F1D691427003ED447 /* VoteCounterView.swift */,
+				22D759411D692301003ED447 /* PostBottomSection.swift */,
+			);
+			name = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +217,15 @@
 				228EC8131D66424B00A98F70 /* FeedInfoTableViewController.swift in Sources */,
 				225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */,
 				225703501D5694350098321C /* LoginAndRegistrationModel.swift in Sources */,
+				228EC8151D67D0A400A98F70 /* TopicFeedTableViewController.swift in Sources */,
+				22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
+				228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */,
 				225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */,
 				2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
+				22D759421D692301003ED447 /* PostBottomSection.swift in Sources */,
+				22D759401D691427003ED447 /* VoteCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
