@@ -609,32 +609,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="376.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-AC-GNa" userLabel="Post Timestamp">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="jTY-Zm-xtR">
-                                                            <variation key="widthClass=compact" constant="100"/>
-                                                        </constraint>
-                                                        <constraint firstAttribute="height" constant="21" id="z8n-C5-ftP">
-                                                            <variation key="widthClass=compact" constant="14"/>
-                                                        </constraint>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.76470588235294112" green="0.72941176470588232" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="jTY-Zm-xtR"/>
-                                                            <exclude reference="z8n-C5-ftP"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <exclude reference="jTY-Zm-xtR"/>
-                                                            <include reference="z8n-C5-ftP"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
                                                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkZ-tW-gkd" userLabel="Post Bottom">
                                                     <rect key="frame" x="-2" y="325" width="324" height="81.5"/>
                                                     <subviews>
@@ -856,6 +830,32 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MockPostPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4Ca-WE-Sm5">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-AC-GNa" userLabel="Post Timestamp">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="jTY-Zm-xtR">
+                                                            <variation key="widthClass=compact" constant="100"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="height" constant="21" id="z8n-C5-ftP">
+                                                            <variation key="widthClass=compact" constant="14"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.76470588235294112" green="0.72941176470588232" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="jTY-Zm-xtR"/>
+                                                            <exclude reference="z8n-C5-ftP"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <exclude reference="jTY-Zm-xtR"/>
+                                                            <include reference="z8n-C5-ftP"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bkZ-tW-gkd" firstAttribute="leading" secondItem="Lnj-gp-bbu" secondAttribute="leading" constant="10" id="14Y-bi-tB5"/>
@@ -892,9 +892,9 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
-                                                    <exclude reference="Uau-AC-GNa"/>
                                                     <exclude reference="pOp-fG-sGJ"/>
                                                     <exclude reference="4Ca-WE-Sm5"/>
+                                                    <exclude reference="Uau-AC-GNa"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="V9H-xE-d24"/>
@@ -924,9 +924,9 @@
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
-                                                    <include reference="Uau-AC-GNa"/>
                                                     <include reference="pOp-fG-sGJ"/>
                                                     <include reference="4Ca-WE-Sm5"/>
+                                                    <include reference="Uau-AC-GNa"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="V9H-xE-d24"/>
