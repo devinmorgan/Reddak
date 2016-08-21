@@ -27,14 +27,16 @@ class TextPostTableViewCell: UITableViewCell {
         
         // vote counter
         self.voteCounter = VoteCounterView.init(voteCount: voteCount)
-        self.voteCounter!.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor, constant: rightMargin).active = true
-        self.voteCounter!.topAnchor.constraintEqualToAnchor(self.topAnchor, constant: topMargin).active = true
+        self.contentView.addSubview(self.voteCounter!)
+        self.voteCounter!.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor, constant: rightMargin).active = true
+        self.voteCounter!.topAnchor.constraintEqualToAnchor(self.contentView.topAnchor, constant: topMargin).active = true
         self.voteCounter!.widthAnchor.constraintEqualToConstant(25).active = true
         self.voteCounter!.heightAnchor.constraintEqualToConstant(65).active = true
         
         // timestamp
-        self.timestampLabel.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor, constant: leftMargin).active = true
-        self.timestampLabel.topAnchor.constraintEqualToAnchor(self.topAnchor, constant: topMargin).active = true
+        self.contentView.addSubview(self.timestampLabel)
+        self.timestampLabel.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor, constant: leftMargin).active = true
+        self.timestampLabel.topAnchor.constraintEqualToAnchor(self.contentView.topAnchor, constant: topMargin).active = true
         self.timestampLabel.trailingAnchor.constraintEqualToAnchor(self.voteCounter!.leadingAnchor, constant: rightMargin).active = true
         self.timestampLabel.heightAnchor.constraintEqualToConstant(15).active = true
         let lightPurple = UIColor.init(red: 195.0/255.0, green: 186.0/255.0, blue: 226.0/255.0, alpha: 1.0)
@@ -44,7 +46,8 @@ class TextPostTableViewCell: UITableViewCell {
         self.timestampLabel.text = timestampText
         
         // textview
-        self.textView.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor, constant: leftMargin).active = true
+        self.contentView.addSubview(self.textView)
+        self.textView.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor, constant: leftMargin).active = true
         self.textView.topAnchor.constraintEqualToAnchor(self.timestampLabel.trailingAnchor, constant: defaultSpaceing).active = true
         self.textView.trailingAnchor.constraintEqualToAnchor(self.voteCounter!.leadingAnchor, constant: defaultSpaceing).active = true
         let postTextColor = UIColor.init(white: 85.0/255.0, alpha: 1.0)
@@ -55,9 +58,10 @@ class TextPostTableViewCell: UITableViewCell {
         
         // bottom section
         self.bottomSection = PostBottomSection.init(postCommentCount: 12)
-        self.bottomSection!.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor, constant: leftMargin).active = true
-        self.bottomSection!.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor, constant: rightMargin).active = true
-        self.bottomSection!.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor, constant: 0).active = true
+        self.contentView.addSubview(self.bottomSection!)
+        self.bottomSection!.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor, constant: leftMargin).active = true
+        self.bottomSection!.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor, constant: rightMargin).active = true
+        self.bottomSection!.bottomAnchor.constraintEqualToAnchor(self.contentView.bottomAnchor, constant: 0).active = true
         self.bottomSection!.topAnchor.constraintEqualToAnchor(self.textView.bottomAnchor, constant: defaultSpaceing).active = true
         self.bottomSection!.heightAnchor.constraintEqualToConstant(36.0)
 

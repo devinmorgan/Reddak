@@ -45,17 +45,19 @@ class TopicFeedTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // make a new post
-        if indexPath.section == 0 {
-            
-        }
+//        // make a new post
+//        if indexPath.section == 0 {
+//            
+//        }
+//        
+//        // existing post
+//        if indexPath.section == 1 {
+//            
+//        }
+        let reuseIdentifier = "test"
+        let cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h aog", postText: "this is the content of the whole post right now", voteCount: 7)
         
-        // existing post
-        if indexPath.section == 1 {
-            
-        }
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
 
