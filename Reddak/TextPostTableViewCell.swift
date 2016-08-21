@@ -12,8 +12,8 @@ class TextPostTableViewCell: UITableViewCell {
 
     private let postTimestamp = UILabel.init()
     private let postText = UITextView.init()
+    private var postCountVoter = VoteCounterView.init()
     private var postBottom = 
-    private var postCountVoter: VoteCounterView
     
 
 }
