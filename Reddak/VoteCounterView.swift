@@ -40,6 +40,7 @@ class VoteCounterView: UIView {
         self.voteCountLabel.textColor = textColor
         self.voteCountLabel.font = font
         self.voteCountLabel.text = String.init(voteCount)
+        self.voteCountLabel.textAlignment = NSTextAlignment.Center
         self.addSubview(self.voteCountLabel)
         
         // downvote button

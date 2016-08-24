@@ -43,6 +43,17 @@ class TopicFeedTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        if indexPath.section == 0 {
+            return 90.0
+        }
+
+        else {
+            return 126.0
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
 //        // make a new post
@@ -55,7 +66,7 @@ class TopicFeedTableViewController: UITableViewController {
 //            
 //        }
         let reuseIdentifier = "test"
-        let cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h aog", postText: "this is the content of the whole post right now", voteCount: 7)
+        let cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9)
         
 //        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
