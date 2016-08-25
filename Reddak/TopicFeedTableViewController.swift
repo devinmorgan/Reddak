@@ -31,42 +31,66 @@ class TopicFeedTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
+        case 1:
+            return 1
+        case 2:
+            return 1
         default:
-            return 2
+            return 0
         }
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView.init()
+        view.backgroundColor = UIColor.clearColor()
+        return view
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10.0
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
         if indexPath.section == 0 {
-            return 90.0
+            return 100.0
         }
 
         else {
-            return 126.0
+            let defaultSpacing: CGFloat = 10
+            let heightOfTimestamp: CGFloat = 14
+            let heightOfText = ("this is some example text").sizeWithAttributes([NSFontAttributeName:UIFont.systemFontOfSize(12)]).height
+            let heightOfBottomSection:CGFloat = 36
+            
+            return defaultSpacing + heightOfTimestamp + defaultSpacing + 2*heightOfText + defaultSpacing + heightOfBottomSection + defaultSpacing
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-//        // make a new post
-//        if indexPath.section == 0 {
-//            
-//        }
-//        
-//        // existing post
-//        if indexPath.section == 1 {
-//            
-//        }
         let reuseIdentifier = "test"
-        let cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9)
+        var cell: UITableViewCell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
+        // make a new post
+        if indexPath.section == 0 {
+            cell = CreateNewPostTableViewCell.init(reuseIdentifier: reuseIdentifier)
+        }
+
+        // existing post
+        else {
+            cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9)
+        }
+        
         
 //        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 

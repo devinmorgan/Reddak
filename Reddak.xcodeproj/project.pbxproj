@@ -22,6 +22,7 @@
 		22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */; };
 		22D759401D691427003ED447 /* VoteCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593F1D691427003ED447 /* VoteCounterView.swift */; };
 		22D759421D692301003ED447 /* PostBottomSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D759411D692301003ED447 /* PostBottomSection.swift */; };
+		22E946E51D6F9B0300338448 /* CreateNewPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostTableViewCell.swift; sourceTree = "<group>"; };
 		22D7593F1D691427003ED447 /* VoteCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCounterView.swift; sourceTree = "<group>"; };
 		22D759411D692301003ED447 /* PostBottomSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBottomSection.swift; sourceTree = "<group>"; };
+		22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */,
 				22D7593F1D691427003ED447 /* VoteCounterView.swift */,
 				22D759411D692301003ED447 /* PostBottomSection.swift */,
+				22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */,
+				22E946E51D6F9B0300338448 /* CreateNewPostTableViewCell.swift in Sources */,
 				225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */,
 				2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,
