@@ -66,14 +66,13 @@ class TopicFeedTableViewController: UITableViewController {
         if indexPath.section == 0 {
             return 100.0
         }
+        
+        else if indexPath.section == 1 {
+            return 400
+        }
 
         else {
-            let defaultSpacing: CGFloat = 10
-            let heightOfTimestamp: CGFloat = 14
-            let heightOfText = ("this is some example text").sizeWithAttributes([NSFontAttributeName:UIFont.systemFontOfSize(12)]).height
-            let heightOfBottomSection:CGFloat = 36
-            
-            return defaultSpacing + heightOfTimestamp + defaultSpacing + 2*heightOfText + defaultSpacing + heightOfBottomSection + defaultSpacing
+            return 120
         }
     }
     
@@ -85,10 +84,14 @@ class TopicFeedTableViewController: UITableViewController {
         if indexPath.section == 0 {
             cell = CreateNewPostTableViewCell.init(reuseIdentifier: reuseIdentifier)
         }
+            
+        else if indexPath.section == 1 {
+            cell = FeedPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: "MockPostPhoto")
+        }
 
         // existing post
         else {
-            cell = TextPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9)
+            cell = FeedPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: nil)
         }
         
         

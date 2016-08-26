@@ -19,7 +19,7 @@
 		228EC8131D66424B00A98F70 /* FeedInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */; };
 		228EC8151D67D0A400A98F70 /* TopicFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8141D67D0A400A98F70 /* TopicFeedTableViewController.swift */; };
 		228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228EC8161D67DC0D00A98F70 /* PostImageInspectorViewController.swift */; };
-		22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */; };
+		22D7593D1D690F62003ED447 /* FeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593C1D690F62003ED447 /* FeedPostTableViewCell.swift */; };
 		22D759401D691427003ED447 /* VoteCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D7593F1D691427003ED447 /* VoteCounterView.swift */; };
 		22D759421D692301003ED447 /* PostBottomSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D759411D692301003ED447 /* PostBottomSection.swift */; };
 		22E946E51D6F9B0300338448 /* CreateNewPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */; };
@@ -40,7 +40,7 @@
 		228EC8121D66424B00A98F70 /* FeedInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedInfoTableViewController.swift; sourceTree = "<group>"; };
 		228EC8141D67D0A400A98F70 /* TopicFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicFeedTableViewController.swift; sourceTree = "<group>"; };
 		228EC8161D67DC0D00A98F70 /* PostImageInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageInspectorViewController.swift; sourceTree = "<group>"; };
-		22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPostTableViewCell.swift; sourceTree = "<group>"; };
+		22D7593C1D690F62003ED447 /* FeedPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPostTableViewCell.swift; sourceTree = "<group>"; };
 		22D7593F1D691427003ED447 /* VoteCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCounterView.swift; sourceTree = "<group>"; };
 		22D759411D692301003ED447 /* PostBottomSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBottomSection.swift; sourceTree = "<group>"; };
 		22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPostTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		22D7593E1D6913FF003ED447 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				22D7593C1D690F62003ED447 /* TextPostTableViewCell.swift */,
+				22D7593C1D690F62003ED447 /* FeedPostTableViewCell.swift */,
 				22D7593F1D691427003ED447 /* VoteCounterView.swift */,
 				22D759411D692301003ED447 /* PostBottomSection.swift */,
 				22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */,
@@ -221,7 +221,7 @@
 				225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */,
 				225703501D5694350098321C /* LoginAndRegistrationModel.swift in Sources */,
 				228EC8151D67D0A400A98F70 /* TopicFeedTableViewController.swift in Sources */,
-				22D7593D1D690F62003ED447 /* TextPostTableViewCell.swift in Sources */,
+				22D7593D1D690F62003ED447 /* FeedPostTableViewCell.swift in Sources */,
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */,
 				22E946E51D6F9B0300338448 /* CreateNewPostTableViewCell.swift in Sources */,
