@@ -96,10 +96,13 @@ class TopicFeedTableViewController: UITableViewController {
     // MARK: - Responsive Functions
     
     func viewImageInModal(postCell: FeedPostTableViewCell) {
-        print("view image in modal")
         self.performSegueWithIdentifier("InspectImageSegue", sender: postCell)
     }
-
+    
+    @IBAction func exitImageInspectorModal(segue: UIStoryboardSegue) {
+        // exits modal automatically
+    }
+    
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

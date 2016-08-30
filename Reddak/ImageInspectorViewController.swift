@@ -10,6 +10,7 @@ import UIKit
 
 class ImageInspectorViewController: UIViewController {
     
+    @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var mainImageView: UIImageView!
     var mainImage: UIImage?
     
@@ -21,18 +22,14 @@ class ImageInspectorViewController: UIViewController {
         }
         
         // add tap gesture to imageView
-        let imageViewTapGesture = UITapGestureRecognizer.init(target: self, action: #selector(hideEscapeButton))
-        self.mainImageView.addGestureRecognizer(imageViewTapGesture)
+        let imageViewTapGesture = UITapGestureRecognizer.init(target: self, action: #selector(toggleExitButtonVisibility))
+        self.view.addGestureRecognizer(imageViewTapGesture)
     }
     
     // MARK: - Private Functions
     
-    @IBAction func exitInspectorView() {
-        print("close modal")
-    }
-    
-    func hideEscapeButton() -> Void {
-        print("hide escape button")
+    func toggleExitButtonVisibility() -> Void {
+        self.exitButton.hidden = !self.exitButton.hidden
     }
     
     // MARK: - Public Functions
