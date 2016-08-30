@@ -10,25 +10,13 @@ import UIKit
 
 class TopicFeedTableViewController: UITableViewController {
 
-    
-    
-    
-    
+    // MARK: - Housekeeping Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
+    // MARK: - Data Source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
@@ -68,7 +56,7 @@ class TopicFeedTableViewController: UITableViewController {
         }
         
         else if indexPath.section == 1 {
-            return 400
+            return 450
         }
 
         else {
@@ -77,40 +65,61 @@ class TopicFeedTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let reuseIdentifier = "test"
-        var cell: UITableViewCell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
+
         // make a new post
         if indexPath.section == 0 {
-            cell = CreateNewPostTableViewCell.init(reuseIdentifier: reuseIdentifier)
+            let cell = CreateNewPostTableViewCell.init(reuseIdentifier: reuseIdentifier)
+            
+            return cell
         }
             
+        // image post
         else if indexPath.section == 1 {
-            cell = FeedPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: "MockPostPhoto")
+            let cell = FeedPostTableViewCell.init(delegate: self, reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: "MockPostPhoto")
+            
+            let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(viewImageInModal(_:)))
+            cell.addGestureToImage(tapGesture)
+            
+            return cell
         }
 
-        // existing post
+        // text post
         else {
-            cell = FeedPostTableViewCell.init(reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: nil)
+            let cell = FeedPostTableViewCell.init(delegate: self, reuseIdentifier: reuseIdentifier, timestampText: "10h ago", postText: "this is the content of the whole post right now", voteCount: 9, imageName: nil)
+            
+            return cell
         }
-        
-        
-//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
-
-        return cell
     }
     
+    // MARK: - Responsive Functions
+    
+    func viewImageInModal(postCell: FeedPostTableViewCell) {
+        print("view image in modal")
+        self.performSegueWithIdentifier("InspectImageSegue", sender: postCell)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController
+        
+        switch segue.identifier! {
+        case "InspectImageSegue":
+            if let tapGesture = sender as? UITapGestureRecognizer {
+                if let imageView = tapGesture.view as? UIImageView {
+                    if let imageModalVC = destinationVC as? ImageInspectorViewController {
+                        imageModalVC.mainImage = imageView.image
+                    }
+                }
+            }
+            break
+        default:
+            break
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

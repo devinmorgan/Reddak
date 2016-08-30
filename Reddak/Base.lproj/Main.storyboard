@@ -347,7 +347,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="47" y="0.0" width="159.5" height="60"/>
+                                            <rect key="frame" x="47" y="0.0" width="160" height="60"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -452,7 +452,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="377"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="plP-RZ-bqV" id="Lnj-gp-bbu">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="376.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="377"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-AC-GNa" userLabel="Post Timestamp">
@@ -806,7 +806,7 @@
                                 <rect key="frame" x="0.0" y="469" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tUE-ls-Yns" id="UVF-He-Tex">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23U-fV-IHO" userLabel="Seperator">
@@ -954,7 +954,7 @@
                                 <rect key="frame" x="0.0" y="559" width="320" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HeP-LR-vaF" id="uS0-gq-KJD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="125.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-7v-7Hu" userLabel="Post Timestamp">
@@ -1333,17 +1333,17 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
-                        <segue destination="Xq3-5v-4RC" kind="presentation" id="RhZ-AS-oUW"/>
+                        <segue destination="Xq3-5v-4RC" kind="presentation" identifier="InspectImageSegue" id="RhZ-AS-oUW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5g-9b-WLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="865.5" y="391"/>
         </scene>
-        <!--Post Image Inspector View Controller-->
+        <!--Image Inspector View Controller-->
         <scene sceneID="66k-sy-4Kh">
             <objects>
-                <viewController id="Xq3-5v-4RC" customClass="PostImageInspectorViewController" customModule="Reddak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xq3-5v-4RC" customClass="ImageInspectorViewController" customModule="Reddak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xKF-2A-1ok"/>
                         <viewControllerLayoutGuide type="bottom" id="3Xg-nD-ABH"/>
@@ -1352,13 +1352,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MockPostPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="enz-cl-ibu">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thB-Z3-HVW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="XCloseIcon"/>
+                                <connections>
+                                    <action selector="exitInspectorView" destination="Xq3-5v-4RC" eventType="touchUpInside" id="GBo-bR-3T7"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enz-cl-ibu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1373,8 +1376,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="enz-cl-ibu"/>
                                 <exclude reference="thB-Z3-HVW"/>
+                                <exclude reference="enz-cl-ibu"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="owA-pK-ZMC"/>
@@ -1387,8 +1390,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="enz-cl-ibu"/>
                                 <include reference="thB-Z3-HVW"/>
+                                <include reference="enz-cl-ibu"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="owA-pK-ZMC"/>
@@ -1402,6 +1405,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="enz-cl-ibu" id="7lh-ZB-J2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaO-rD-B0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

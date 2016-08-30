@@ -15,10 +15,12 @@ class FeedPostTableViewCell: UITableViewCell {
     private var textView = UITextView.init()
     private var bottomSection: PostBottomSection?
     private var postImageView: UIImageView?
+    private var delegate: TopicFeedTableViewController
     
     private let spaceing: CGFloat = 10.0
     
-    init(reuseIdentifier: String, timestampText: String, postText: String, voteCount: Int, imageName: String?) {
+    init(delegate: TopicFeedTableViewController, reuseIdentifier: String, timestampText: String, postText: String, voteCount: Int, imageName: String?) {
+        self.delegate = delegate
         
         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
         
@@ -65,34 +67,37 @@ class FeedPostTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.bottomSection!)
         self.bottomSection!.translatesAutoresizingMaskIntoConstraints = false
         self.bottomSection!.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor, constant: spaceing).active = true
-        self.bottomSection!.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor, constant: spaceing).active = true
+        self.bottomSection!.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor, constant: -spaceing).active = true
         self.bottomSection!.heightAnchor.constraintEqualToConstant(36.0).active = true
+        self.bottomSection!.bottomAnchor.constraintEqualToAnchor(self.contentView.bottomAnchor).active = true
         
+        // post image
         if imageName != nil {
-            
-            // post image
-            let postImage = UIImage.init(named: imageName!)
-            self.postImageView = UIImageView.init(image: postImage)
+            let image = UIImage.init(named: imageName!)
+            self.postImageView = UIImageView.init(image: image)
+            self.postImageView!.userInteractionEnabled = true
             self.contentView.addSubview(self.postImageView!)
             self.postImageView!.translatesAutoresizingMaskIntoConstraints = false
             self.postImageView!.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor, constant: spaceing).active = true
             self.postImageView!.topAnchor.constraintEqualToAnchor(self.textView.bottomAnchor, constant: spaceing).active = true
             self.postImageView!.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor, constant: -spaceing).active = true
             
-            // bottom section (top constraint)
-            self.bottomSection!.topAnchor.constraintEqualToAnchor(self.postImageView!.bottomAnchor, constant: spaceing).active = true
-            
-        }
-        
-        else {
-            // bottom section (top constraint)
-            self.bottomSection!.topAnchor.constraintEqualToAnchor(self.textView.bottomAnchor, constant: spaceing).active = true
         }
         
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK - Public API
+    
+    func addGestureToImage(gesture: UIGestureRecognizer) {
+        self.postImageView!.addGestureRecognizer(gesture)
+    }
+    
+    func getPostImageFromCell() -> UIImage? {
+        return self.postImageView?.image
     }
     
 

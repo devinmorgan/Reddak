@@ -11,6 +11,7 @@
 		225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703511D5694CD0098321C /* ViewsHelperCode.swift */; };
 		225703561D5706EA0098321C /* BackgroundGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703551D5706EA0098321C /* BackgroundGradientsView.swift */; };
 		2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225703591D5708E50098321C /* RegistrationScreenViewController.swift */; };
+		226265B51D6FD99A00F213A6 /* ImageInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226265B41D6FD99A00F213A6 /* ImageInspectorViewController.swift */; };
 		228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B1EEE1D515C580071ABB4 /* AppDelegate.swift */; };
 		228B1EF41D515C580071ABB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF21D515C580071ABB4 /* Main.storyboard */; };
 		228B1EF61D515C580071ABB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B1EF51D515C580071ABB4 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		225703511D5694CD0098321C /* ViewsHelperCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsHelperCode.swift; sourceTree = "<group>"; };
 		225703551D5706EA0098321C /* BackgroundGradientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundGradientsView.swift; sourceTree = "<group>"; };
 		225703591D5708E50098321C /* RegistrationScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationScreenViewController.swift; sourceTree = "<group>"; };
+		226265B41D6FD99A00F213A6 /* ImageInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInspectorViewController.swift; sourceTree = "<group>"; };
 		228B1EEB1D515C570071ABB4 /* Reddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228B1EEE1D515C580071ABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228B1EF31D515C580071ABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,10 +139,11 @@
 		22D7593E1D6913FF003ED447 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */,
 				22D7593C1D690F62003ED447 /* FeedPostTableViewCell.swift */,
 				22D7593F1D691427003ED447 /* VoteCounterView.swift */,
 				22D759411D692301003ED447 /* PostBottomSection.swift */,
-				22E946E41D6F9B0300338448 /* CreateNewPostTableViewCell.swift */,
+				226265B41D6FD99A00F213A6 /* ImageInspectorViewController.swift */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				228B1F0A1D52B18F0071ABB4 /* LoginScreenViewController.swift in Sources */,
 				228EC8171D67DC0D00A98F70 /* PostImageInspectorViewController.swift in Sources */,
 				22E946E51D6F9B0300338448 /* CreateNewPostTableViewCell.swift in Sources */,
+				226265B51D6FD99A00F213A6 /* ImageInspectorViewController.swift in Sources */,
 				225703521D5694CD0098321C /* ViewsHelperCode.swift in Sources */,
 				2257035A1D5708E50098321C /* RegistrationScreenViewController.swift in Sources */,
 				228B1EEF1D515C580071ABB4 /* AppDelegate.swift in Sources */,

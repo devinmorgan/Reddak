@@ -65,8 +65,8 @@ class PostBottomSection: UIView {
         self.addSubview(self.centerPartition)
         self.centerPartition.translatesAutoresizingMaskIntoConstraints = false
         self.centerPartition.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
-        self.centerPartition.topAnchor.constraintEqualToAnchor(self.topAnchor, constant: 10).active = true
-        self.centerPartition.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor, constant: -10).active = true
+        self.centerPartition.topAnchor.constraintEqualToAnchor(self.topAnchor, constant: 5).active = true
+        self.centerPartition.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor, constant: -5).active = true
         self.centerPartition.widthAnchor.constraintEqualToConstant(standardThickness).active = true
     }
     
